@@ -16,6 +16,8 @@ public class exceptionarray{
          catch(ArithmeticException e){
         System.out.println("Kindly enter the non-zero denomenator");
        }
+     
+      
         System.out.println("The calC is terminated");
 
         try{
@@ -36,6 +38,9 @@ public class exceptionarray{
 
        catch(ArrayIndexOutOfBoundsException e){
         System.out.println("Kindly enter the position wrt size");
+       }
+         catch(NegativeArraySizeException e){
+        System.out.println("Kindly enter the positive integer");
        }
          System.out.println("The APP is terminated");
         
