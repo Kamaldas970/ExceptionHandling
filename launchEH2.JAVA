@@ -3,6 +3,7 @@ import java.util.*;
 public class launchEH2{
    static class alpha{
         void divide(){
+            try{
             Scanner sc=new Scanner(System.in);
             System.out.println("The calC is started");
          
@@ -15,29 +16,30 @@ public class launchEH2{
 
             int res=n/d;
             System.out.println("The result is : " + res);
+            }
+            catch(ArithmeticException e){
+                System.out.println("Exception Handled in divide mathod()");
+                throw e; //aft throw it wont print any statement.//
+            }
+            finally{ //finally keyword is used  prints the statements below the throw keyword.//
+            System.out.println("divide Application is terminated");
+            }
             
           
         }
-
-        void display(){
-           
-            alpha d=new alpha();
-            d.divide();
-            
-           
-
-        }
     }
-
     public static void main(String args[]){
-        launchEH2.alpha a= new launchEH2.alpha();
         try{
-        a.display();
+        launchEH2.alpha a= new launchEH2.alpha();
+      a.divide();
         }
+        catch(ArithmeticException e){
+            System.out.println("Exception Handled in Main Method()");
+        }
+         System.out.println("Main Application is terminated");
+       
+       
 
-           catch(ArithmeticException e){
-                System.out.println(" the exception is handle in Main method");
-            }
 
     }
 }
