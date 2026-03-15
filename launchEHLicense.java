@@ -5,17 +5,12 @@ class UnderAgeException extends java.lang.Exception{
         super(msg);
         
     }
-
 }
-
 class OverAgeException extends java.lang.Exception{
      public OverAgeException(String msg){
         super(msg);
-        
     }
-
 }
-
 class Applicant{
     int age;
    
@@ -60,17 +55,10 @@ class License{
        }
        catch(UnderAgeException | OverAgeException ttt){
         System.out.println("Blocked from govt");
-
-
        }
-
-
        }
-
-
        }
     }
-
 }
 public class launchEHLicense{
     public static void main(String args[]){
