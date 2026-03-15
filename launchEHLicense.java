@@ -27,7 +27,7 @@ class Applicant{
    
    }
    void verify() throws UnderAgeException, OverAgeException{
-    if(age>18 && age<=70){
+    if(age>=18 && age<70){
         System.out.println("Application will proceed for further verification");
     }
     else if(age<18) {
